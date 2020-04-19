@@ -44,7 +44,7 @@ namespace ChromaSchemeColorizer
         {
             if (color == null) return;
             if (!_event.ContainsKey("_customData")) _event._customData = new JObject();
-            _event._customData._color = new JArray(color);
+            if (!_event.ContainsKey("_color")) _event._customData._color = new JArray(color);
         }
 
         private static ColorScheme GetColorScheme(this List<ColorScheme> schemes, float time)
