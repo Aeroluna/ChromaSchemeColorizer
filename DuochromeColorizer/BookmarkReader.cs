@@ -7,7 +7,7 @@ namespace ChromaSchemeColorizer
 {
     internal static class BookmarkReader
     {
-        private static Regex rx = new Regex(@"^([^=\d]*(colorLeft|colorRight|envColorLeft|envColorRight|obstacleColor|bombColor)=\d(\.\d+)?,\d(\.\d+)?,\d(\.\d+)?(,\d(\.\d+)?)?)+$", RegexOptions.Compiled);
+        private static Regex rx = new Regex(@"^([^=\d]*(colorLeft|colorRight|envColorLeft|envColorRight|obstacleColor|bombColor)=\d+(\.\d+)?,\d+(\.\d+)?,\d+(\.\d+)?(,\d+(\.\d+)?)?)+$", RegexOptions.Compiled);
 
         internal static List<ColorScheme> ReadBookmarks(dynamic beatmapData)
         {
