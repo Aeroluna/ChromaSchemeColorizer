@@ -19,6 +19,7 @@ namespace ChromaSchemeColorizer
             foreach (dynamic @object in array)
             {
                 ColorScheme scheme = schemes.GetColorScheme((float)@object._time);
+                if (scheme == null) return;
                 action(@object, scheme);
             }
         }
